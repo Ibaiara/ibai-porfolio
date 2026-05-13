@@ -42,13 +42,18 @@
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
     <div class="header-container d-flex flex-column align-items-start">
+      <div class="language-switcher mb-3">
+        <button id="lang-toggle" class="btn btn-outline-light btn-sm">
+          EN
+        </button>
+      </div>
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Inicio</a></li>
-          <li><a href="#about"><i class="bi bi-person navicon"></i> Sobre mi</a></li>
-          <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Curriculum</a></li>
-          <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Porfolio</a></li>
-          <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contacto</a></li>
+          <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span data-i18n="nav.home">Inicio</span></a></li>
+          <li><a href="#about"><i class="bi bi-person navicon"></i><span data-i18n="nav.about">Sobre mi</span></a></li>
+          <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span data-i18n="nav.resume">Curriculum</span></a></li>          
+          <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span data-i18n="nav.portfolio">Porfolio</span></a></li>
+          <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span data-i18n="nav.contact">Contacto</span></a></li>
         </ul>
       </nav>
     </div>
@@ -73,21 +78,36 @@
             <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
               <div class="hero-text">
                 <h1><span class="accent-text">Ibai Araña </span></h1>
-                <p class="lead">Soy un <span class="typed" data-typed-items="Ingeniero Informatiko, Tecnico Analista, Desarrollador Software, Técnico de Aplicaciones "></span></p>
-                <p class="description">Ingeniero informático interesado en el diseño y desarrollo de sistemas de software,
+                <p class="lead">
+                  <span data-i18n="hero.lead.prefix">Soy un</span>
+                  <span
+                    class="typed"
+                    data-typed-items="Ingeniero Informático, Técnico Analista, Desarrollador Software, Técnico de Aplicaciones"
+                    data-typed-items-en="Software Engineer, Technical Analyst, Software Developer, Application Engineer">
+                  </span>
+                </p>
+                <p class="description" data-i18n="hero.description">
+                  Ingeniero informático interesado en el diseño y desarrollo de sistemas de software,
                   con experiencia en entornos industriales, herramientas empresariales y proyectos
                   experimentales orientados a comprender cómo se construyen y escalan sistemas completos.
                 </p>
-
                 <div class="hero-actions">
-                  <a href="#portfolio" class="btn btn-primary">Explora Mis Proyectos</a>
-                  <a href="#contact" class="btn btn-outline">Ponte en Contacto</a>
-                  <a href="assets/cv/Ibai_Arana_cv_ES.pdf" class="btn btn-outline" download>
+                  <a href="#portfolio" class="btn btn-primary" data-i18n="hero.projects">
+                    Explora Mis Proyectos
+                  </a>
+                  
+                  <a href="#contact" class="btn btn-outline" data-i18n="hero.contact">
+                    Ponte en Contacto
+                  </a>
+                  
+                  <a href="assets/cv/Ibai_Arana_cv_ES.pdf"
+                     class="btn btn-outline"
+                     download
+                     data-i18n="hero.cv">
                     <i class="bi bi-download"></i>
                     Descargar CV
                   </a>
-                </div>
-
+                </div> 
                 <div class="social-links">
                   <a href="https://github.com/Ibaiara"><i class="bi bi-github"></i></a>
                   <a href="https://linkedin.com/in/ibai-araña-b2832027a"><i class="bi bi-linkedin"></i></a>
@@ -129,8 +149,10 @@
 
               <div class="profile-content">
                 <h3>Ibai Araña</h3>
-                <p class="profession">Ingeniero Informatico</p>
-
+                <p class="profession" data-i18n="about.profession">
+                  Ingeniero Informatico
+                </p>
+              
                 <div class="contact-links">
                   <a href="mailto:marcus@example.com" class="contact-item">
                     <i class="bi bi-envelope"></i>
@@ -152,49 +174,67 @@
           <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
             <div class="about-content">
               <div class="section-header">
-                <span class="badge-text">Sobre mi</span>
-                <h2>Ingeniero informático con enfoque en sistemas completos</h2>
+                <span class="badge-text" data-i18n="about.badge">Sobre mi</span>
+                <h2 data-i18n="about.heading">
+                  Ingeniero informático con enfoque en sistemas completos
+                </h2>
               </div>
 
               <div class="description">
-                <p>
-                  Ingeniero informático con experiencia en el diseño y desarrollo de sistemas de software
-                  en distintos entornos profesionales, desde pequeñas empresas industriales hasta
-                  organizaciones de mayor tamaño.
-                </p>
-              
-                <p>
-                  He participado en proyectos de implantación de ERPs, desarrollo de herramientas internas,
-                  automatización de procesos y aplicaciones interactivas. Mi interés principal está en
-                  comprender cómo se diseñan, conectan y escalan sistemas completos, más allá de una
-                  tecnología concreta.
-                </p>
-              </div>
+                  <p data-i18n="about.p1">
+                    Ingeniero informático con experiencia en el diseño y desarrollo de sistemas de software
+                    en distintos entornos profesionales, desde pequeñas empresas industriales hasta
+                    organizaciones de mayor tamaño.
+                  </p>
 
-              <div class="details-grid">
-                <div class="detail-row">
-                  <div class="detail-item">
-                    <span class="detail-label">Especialización</span>
-                    <span class="detail-value">Desarrollo de software y sistemas empresariales</span>
+                  <p data-i18n="about.p2">
+                    He participado en proyectos de implantación de ERPs, desarrollo de herramientas internas,
+                    automatización de procesos y aplicaciones interactivas. Mi interés principal está en
+                    comprender cómo se diseñan, conectan y escalan sistemas completos, más allá de una
+                    tecnología concreta.
+                  </p>
+                </div>
+
+
+                <div class="details-grid">
+                  <div class="detail-row">
+                    <div class="detail-item">
+                      <span class="detail-label" data-i18n="about.detail.specialization">
+                        Especialización
+                      </span>
+                      <span class="detail-value" data-i18n="about.detail.specialization.value">
+                        Desarrollo de software y sistemas empresariales
+                      </span>
+                    </div>
+                    <div class="detail-item">
+                      <span class="detail-label" data-i18n="about.detail.profile">
+                        Perfil
+                      </span>
+                      <span class="detail-value" data-i18n="about.detail.profile.value">
+                        Ingeniero de Software
+                      </span>
+                    </div>
                   </div>
-                  <div class="detail-item">
-                    <span class="detail-label">Perfil</span>
-                    <span class="detail-value">Ingeniero de Software</span>
+                
+                  <div class="detail-row">
+                    <div class="detail-item">
+                      <span class="detail-label" data-i18n="about.detail.experience">
+                        Experiencia
+                      </span>
+                      <span class="detail-value" data-i18n="about.detail.experience.value">
+                        Industria · Startups · Proyectos personales
+                      </span>
+                    </div>
+                    <div class="detail-item">
+                      <span class="detail-label" data-i18n="about.detail.languages">
+                        Idiomas
+                      </span>
+                      <span class="detail-value" data-i18n="about.detail.languages.value">
+                        Euskera · Español · Inglés
+                      </span>
+                    </div>
                   </div>
                 </div>
-                <div class="detail-row">
-                  <div class="detail-item">
-                    <span class="detail-label">Experiencia</span>
-                    <span class="detail-value">
-                      Industria · Startups · Proyectos personales
-                    </span>
-                  </div>
-                  <div class="detail-item">
-                    <span class="detail-label">Idiomas</span>
-                    <span class="detail-value">Euskera · Español · Inglés</span>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -208,8 +248,9 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Skills</h2>
-        <p>Tecnologías y áreas con las que he trabajado en contextos reales y proyectos personales.</p>
+        <h2 data-i18n="skills.title">Skills</h2>
+        <p data-i18n="skills.subtitle">
+          Tecnologías y áreas con las que he trabajado en contextos reales y proyectos personales.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -217,17 +258,17 @@
         <div class="row">
           <div class="col-lg-6">
             <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
-              <h3>Aplicaciones e Interfaces</h3>
+              <h3 data-i18n="skills.frontend.title">Aplicaciones e Interfaces</h3>
               <div class="skills-animation">
                 <div class="skill-item">
                   <div class="d-flex justify-content-between align-items-center">
                     <h4>HTML / CSS</h4>
-                    <span class="skill-percentage">Intermedio</span>
+                    <span class="skill-percentage" data-i18n="skills.level.intermediate">Intermedio</span>
                   </div>
                   <div class="progress">
                     <div class="progress-bar" aria-valuenow="60"></div>
                   </div>
-                  <div class="skill-tooltip">
+                  <div class="skill-tooltip" data-i18n="skills.htmlcss.desc">
                     Desarrollo de interfaces funcionales y mantenibles para aplicaciones web internas.
                   </div>
                 </div>
@@ -235,12 +276,12 @@
                 <div class="skill-item">
                   <div class="d-flex justify-content-between align-items-center">
                     <h4>JavaScript</h4>
-                    <span class="skill-percentage">Avanzado</span>
+                    <span class="skill-percentage" data-i18n="skills.level.advanced">Avanzado</span>
                   </div>
                   <div class="progress">
                     <div class="progress-bar" aria-valuenow="75"></div>
                   </div>
-                  <div class="skill-tooltip">
+                  <div class="skill-tooltip" data-i18n="skills.js.desc">
                     Lógica de cliente, interacción con APIs y automatización de tareas.
                   </div>
                 </div>
@@ -248,12 +289,12 @@
                 <div class="skill-item">
                   <div class="d-flex justify-content-between align-items-center">
                     <h4>Unity (UI)</h4>
-                    <span class="skill-percentage">Intermedio</span>
+                    <span class="skill-percentage" data-i18n="skills.level.intermediate">Intermedio</span>
                   </div>
                   <div class="progress">
                     <div class="progress-bar" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
-                  <div class="skill-tooltip">
+                  <div class="skill-tooltip" data-i18n="skills.unity.desc">
                     Desarrollo de interfaces interactivas en entornos 3D y gemelos digitales.
                   </div>
                 </div>
@@ -263,43 +304,43 @@
 
           <div class="col-lg-6">
             <div class="skills-category" data-aos="fade-up" data-aos-delay="300">
-              <h3>Backend & Sistemas</h3>
+              <h3 data-i18n="skills.backend.title">Backend & Sistemas</h3>
               <div class="skills-animation">
                 <div class="skill-item">
                   <div class="d-flex justify-content-between align-items-center">
-                    <h4>Automatización y scripts</h4>
-                    <span class="skill-percentage">Avanzado</span>
+                    <h4 data-i18n="skills.automation.title">Automatización y scripts</h4>
+                    <span class="skill-percentage" data-i18n="skills.level.advanced">Avanzado</span>
                   </div>
                   <div class="progress">
                     <div class="progress-bar" aria-valuenow="80"></div>
                   </div>
-                  <div class="skill-tooltip">
+                  <div class="skill-tooltip" data-i18n="skills.automation.desc">
                     Automatización de procesos y desarrollo de herramientas internas.
                   </div>
                 </div>
 
                 <div class="skill-item">
                   <div class="d-flex justify-content-between align-items-center">
-                    <h4>Python y C</h4>
-                    <span class="skill-percentage">Intermedio</span>
+                    <h4 data-i18n="skills.pythonc.title">Python y C</h4>
+                    <span class="skill-percentage" data-i18n="skills.level.intermediate">Intermedio</span>
                   </div>
                   <div class="progress">
                     <div class="progress-bar" aria-valuenow="70"></div>
                   </div>
-                  <div class="skill-tooltip">
+                  <div class="skill-tooltip" data-i18n="skills.pythonc.desc">
                     Desarrollo de scripts, utilidades y lógica de negocio.
                   </div>
                 </div>
 
                 <div class="skill-item">
                   <div class="d-flex justify-content-between align-items-center">
-                    <h4>SQL / Datos</h4>
-                    <span class="skill-percentage">Intermedio</span>
+                    <h4 data-i18n="skills.sql.title">SQL / Datos</h4>
+                    <span class="skill-percentage" data-i18n="skills.level.intermediate">Intermedio</span>
                   </div>
                   <div class="progress">
                     <div class="progress-bar" aria-valuenow="65"></div>
                   </div>
-                  <div class="skill-tooltip">
+                  <div class="skill-tooltip" data-i18n="skills.sql.desc">
                     Consultas, gestión de datos y soporte a herramientas corporativas.
                   </div>
                 </div>
@@ -317,8 +358,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Curriculum</h2>
-        <p>
+        <h2 data-i18n="resume.title">Curriculum</h2>
+        <p data-i18n="resume.subtitle">
           Experiencia profesional y formación académica en distintos entornos,
           desde industria hasta desarrollo de software y proyectos experimentales.
         </p>
@@ -334,15 +375,16 @@
                 <img src="assets/img/profile/IbaiProfile.webp" alt="Ibai Arana" class="img-fluid rounded">
               </div>
 
-              <h3>Contexto profesional</h3>
-              <p>
+              <h3 data-i18n="resume.context.title">Contexto profesional</h3>
+
+              <p data-i18n="resume.context.text">
                 Ingeniero informático con capacidad para trabajar en distintos
                 ámbitos, desde entornos industriales hasta desarrollo de software
                 comercial y proyectos experimentales. Interesado en comprender
                 cómo se diseñan y conectan sistemas completos en contextos reales.
               </p>
 
-              <h3 class="mt-4">Informacion de Contacto</h3>
+              <h3 class="mt-4" data-i18n="resume.contact.title">Informacion de Contacto</h3>
               <ul class="contact-info list-unstyled">
                 <li><i class="bi bi-geo-alt"></i> Gipuzkoa, España</li>
                 <li><i class="bi bi-envelope"></i> ibai354@gmail.com</li>
@@ -367,63 +409,103 @@
           <div class="col-lg-8 ps-4 ps-lg-5">
             <!-- Experience Section -->
             <div class="resume-section" data-aos="fade-up">
-              <h3><i class="bi bi-briefcase me-2"></i>Experiencia Profesional</h3>
+              <h3>
+                <i class="bi bi-briefcase me-2"></i>
+                <span data-i18n="resume.experience.title">Experiencia Profesional</span>
+              </h3>
 
               <div class="resume-item">
-                <h4>Ingeniero Informático</h4>
-                <h5>Diciembre 2025 - Actualidad</h5>
+                <h4 data-i18n="resume.job.ingeteam.title">Ingeniero Informático</h4>
+                <h5 data-i18n="resume.job.ingeteam.date">Diciembre 2025 - Actualidad</h5>
                 <p class="company"><i class="bi bi-building"></i> Ingeteam Indar Machines</p>
                 <ul>
-                  <li>Adaptación y ampliación del sector de bombas en el área de informática y comunicaciones</li>
-                  <li>Gestión y mantenimiento de herramientas software para selección de equipos</li>
-                  <li>Trabajo con datos y aplicaciones internas orientadas a uso corporativo</li>
-                  <li>Desarrollo de automatizaciones para generación de informes y soporte a negocio</li>
+                  <li data-i18n="resume.job.ingeteam.b1">
+                    Adaptación y ampliación del sector de bombas en el área de informática y comunicaciones
+                  </li>
+                  <li data-i18n="resume.job.ingeteam.b2">
+                    Gestión y mantenimiento de herramientas software para selección de equipos
+                  </li>
+                  <li data-i18n="resume.job.ingeteam.b3">
+                    Trabajo con datos y aplicaciones internas orientadas a uso corporativo
+                  </li>
+                  <li data-i18n="resume.job.ingeteam.b4">
+                    Desarrollo de automatizaciones para generación de informes y soporte a negocio
+                  </li>
                 </ul>
               </div>
 
               <div class="resume-item">
-                <h4>Trabajo de Fin de Grado – Desarrollo de Gemelos Digitales</h4>
-                <h5>Enero 2025 - Junio 2025</h5>
+                <h4 data-i18n="resume.job.immersia.title">
+                  Trabajo de Fin de Grado – Desarrollo de Gemelos Digitales
+                </h4>
+                <h5 data-i18n="resume.job.immersia.date">Enero 2025 - Junio 2025</h5>
                 <p class="company"><i class="bi bi-building"></i> IMMERSIA Data Visualization</p>
                 <ul>
-                  <li>Implementación de nuevas funcionalidades en un gemelo digital</li>
-                  <li>Desarrollo de visualizaciones avanzadas e interactivas de datos</li>
-                  <li>Trabajo con Unity para creación de interfaces e interacción contextual</li>
+                  <li data-i18n="resume.job.immersia.b1">
+                    Implementación de nuevas funcionalidades en un gemelo digital
+                  </li>
+                  <li data-i18n="resume.job.immersia.b2">
+                    Desarrollo de visualizaciones avanzadas e interactivas de datos
+                  </li>
+                  <li data-i18n="resume.job.immersia.b3">
+                    Trabajo con Unity para creación de interfaces e interacción contextual
+                  </li>
                 </ul>
               </div>
 
               <div class="resume-item">
-                <h4>Prácticas Universitarias de Informática</h4>
-                <h5>Julio 2023 - Septiembre 2023</h5>
+                <h4 data-i18n="resume.job.labelan.title">
+                  Prácticas Universitarias de Informática
+                </h4>
+                <h5 data-i18n="resume.job.labelan.date">Julio 2023 - Septiembre 2023</h5>
                 <p class="company"><i class="bi bi-building"></i> Labe Lan, S.L.</p>
                 <ul>
-                  <li>Participación en la implantación de un nuevo sistema ERP</li>
-                  <li>Ayuda en procesos de digitalización y migración de datos</li>
-                  <li>Colaboración con el equipo informático y el área administrativa</li>
-                  <li>Validación de procesos y apoyo en pruebas funcionales</li>
+                  <li data-i18n="resume.job.labelan.b1">
+                    Participación en la implantación de un nuevo sistema ERP
+                  </li>
+                  <li data-i18n="resume.job.labelan.b2">
+                    Ayuda en procesos de digitalización y migración de datos
+                  </li>
+                  <li data-i18n="resume.job.labelan.b3">
+                    Colaboración con el equipo informático y el área administrativa
+                  </li>
+                  <li data-i18n="resume.job.labelan.b4">
+                    Validación de procesos y apoyo en pruebas funcionales
+                  </li>
                 </ul>
               </div>
 
               <div class="resume-item">
-                <h4>Técnico de Mantenimiento (refuerzo de verano)</h4>
-                <h5>Julio 2021 - Septiembre 2021</h5>
+                <h4 data-i18n="resume.job.maintenance.title">
+                  Técnico de Mantenimiento (refuerzo de verano)
+                </h4>
+                <h5 data-i18n="resume.job.maintenance.date">Julio 2021 - Septiembre 2021</h5>
                 <p class="company"><i class="bi bi-building"></i> Labe Lan, S.L.</p>
                 <ul>
-                  <li>Trabajo de reparación y mantenimiento refractario en hornos industriales</li>
-                  <li>Apoyo a tareas técnicas en entorno industrial real</li>
+                  <li data-i18n="resume.job.maintenance.b1">
+                    Trabajo de reparación y mantenimiento refractario en hornos industriales
+                  </li>
+                  <li data-i18n="resume.job.maintenance.b2">
+                    Apoyo a tareas técnicas en entorno industrial real
+                  </li>
                 </ul>
               </div>
             </div>
 
             <!-- Education Section -->
             <div class="resume-section" data-aos="fade-up" data-aos-delay="100">
-              <h3><i class="bi bi-mortarboard me-2"></i>Educacion</h3>
+              <h3>
+                <i class="bi bi-mortarboard me-2"></i>
+                <span data-i18n="resume.education.title">Educacion</span>
+              </h3>
 
               <div class="resume-item">
-                <h4>Grado en Ingeniería Informática</h4>
+                <h4 data-i18n="resume.education.degree">
+                  Grado en Ingeniería Informática
+                </h4>
                 <h5>2020 - 2025</h5>
                 <p class="company"><i class="bi bi-building"></i> Universidad del País Vasco</p>
-                <p>
+                <p data-i18n="resume.education.desc">
                   Formación orientada al desarrollo de software, sistemas y bases
                   de la ingeniería informática.
                 </p>
@@ -431,7 +513,7 @@
 
               <div class="resume-item">
                 <h4>Cambridge English Advanced (C1)</h4>
-                <h5>Universidad de Cambridge</h5>
+                <h5>University of Cambridge</h5>
                 <p class="company"><i class="bi bi-building"></i> ESOL International</p>
               </div>
             </div>
@@ -447,8 +529,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Porfolio</h2>
-        <p>
+        <h2 data-i18n="portfolio.title">Porfolio</h2>
+        <p data-i18n="portfolio.subtitle">
           Proyectos personales y profesionales orientados al diseño y desarrollo
           de sistemas de software en contextos reales y experimentales.
         </p>
@@ -466,9 +548,15 @@
             <div class="col-lg-3 filter-sidebar">
               <div class="filters-wrapper" data-aos="fade-right" data-aos-delay="150">
                 <ul class="portfolio-filters isotope-filters">
-                  <li data-filter="*" class="filter-active">Todos</li>
-                  <li data-filter=".filter-software">Software</li>
-                  <li data-filter=".filter-systems">Systemas & IA</li>
+                  <li data-filter="*" class="filter-active" data-i18n="portfolio.filter.all">
+                    Todos
+                  </li>
+                  <li data-filter=".filter-software" data-i18n="portfolio.filter.software">
+                    Software
+                  </li>
+                  <li data-filter=".filter-systems" data-i18n="portfolio.filter.systems">
+                    Sistemas & IA
+                  </li>
                 </ul>
               </div>
             </div>
@@ -489,10 +577,15 @@
 
                     <div class="portfolio-info">
                       <div class="content">
-                        <span class="category">Software · Aplicación empresarial</span>
-                        <h4>Gestión de viajes corporativos</h4>
+                        <span class="category" data-i18n="portfolio.travel.category">
+                          Software · Aplicación empresarial
+                        </span>
+                        <h4 data-i18n="portfolio.travel.title">
+                          Gestión de viajes corporativos
+                        </h4>
 
-                        <p style="font-size: 14px; margin-bottom: 10px;">
+                        <p style="font-size: 14px; margin-bottom: 10px;"
+                          data-i18n="portfolio.travel.desc">
                           Aplicación desarrollada inicialmente como app de escritorio con Electron
                           para la gestión de viajes en un entorno empresarial real. Incluye una
                           demo web que reutiliza la lógica principal del backend.
@@ -502,14 +595,15 @@
                           <!-- Demo web -->
                           <a href="https://travel-manager-web.onrender.com/"
                             target="_blank"
-                            title="Ver demo web">
+                            title="Ver demo web"
+                            data-i18n-title="portfolio.travel.demo">
                             <i class="bi bi-globe"></i>
                           </a>
 
-                          <!-- GitHub -->
                           <a href="https://github.com/Ibaiara/TravelManagementApp"
                             target="_blank"
-                            title="Ver código en GitHub">
+                            title="Ver código en GitHub"
+                            data-i18n-title="portfolio.travel.github">
                             <i class="bi bi-github"></i>
                           </a>
                         </div>
@@ -528,26 +622,32 @@
 
                     <div class="portfolio-info">
                       <div class="content">
-                        <span class="category">IA · Sistemas experimentales</span>
-                        <h4>IbaiRPG — Motor narrativo con IA</h4>
+                        <span class="category" data-i18n="portfolio.rpg.category">
+                          IA · Sistemas experimentales
+                        </span>
+                        <h4 data-i18n="portfolio.rpg.title">
+                          IbaiRPG — Motor narrativo con IA
+                        </h4>
 
-                        <p style="font-size: 14px; margin-bottom: 10px;">
+                        <p style="font-size: 14px; margin-bottom: 10px;"
+                          data-i18n="portfolio.rpg.desc">
                           RPG narrativo impulsado por IA, orientado a explorar
-                          orquestación de flujos , control de estado persistente y automatizaciones de diferentes agentes de IA,
-                          en sistemas generativos con n8n.
+                          orquestación de flujos, control de estado persistente y
+                          automatización de diferentes agentes en sistemas generativos con n8n.
                         </p>
 
                         <div class="portfolio-links">
                           <!-- Demo futura -->
                           <a href="#"
-                            title="Demo web próximamente">
+                            title="Demo web próximamente"
+                            data-i18n-title="portfolio.rpg.demo">
                             <i class="bi bi-hourglass-split"></i>
                           </a>
 
-                          <!-- GitHub -->
                           <a href="https://github.com/Ibaiara/AI-driven-RPG-Application"
                             target="_blank"
-                            title="Ver código en GitHub">
+                            title="Ver código en GitHub"
+                            data-i18n-title="portfolio.rpg.github">
                             <i class="bi bi-github"></i>
                           </a>
                         </div>
@@ -572,8 +672,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Contacto</h2>
-        <p>
+        <h2 data-i18n="contact.title">Contacto</h2>
+        <p data-i18n="contact.subtitle">
           Si quieres contactar conmigo o ver más sobre mi trabajo,
           puedes hacerlo a través de los siguientes canales.
         </p>
@@ -585,18 +685,18 @@
           <!-- Contact info -->
           <div class="col-lg-5">
             <div class="info-box">
-              <h3>Informacion de Contacto</h3>
-              <p>
-                Estoy abierto a oportunidades profesionales, colaboración en
-                proyectos o cualquier consulta relacionada con mi trabajo.
-              </p>
+              <h3 data-i18n="contact.info.title">Informacion de Contacto</h3>
+                <p data-i18n="contact.info.text">
+                  Estoy abierto a oportunidades profesionales, colaboración en
+                  proyectos o cualquier consulta relacionada con mi trabajo.
+                </p>
 
               <div class="info-item">
                 <div class="icon-box">
                   <i class="bi bi-geo-alt"></i>
                 </div>
                 <div class="content">
-                  <h4>Location</h4>
+                  <h4 data-i18n="contact.location.title">Location</h4>
                   <p>Gipuzkoa, España</p>
                 </div>
               </div>
@@ -606,7 +706,7 @@
                   <i class="bi bi-envelope"></i>
                 </div>
                 <div class="content">
-                  <h4>Email</h4>
+                  <h4 data-i18n="contact.email.title">Email</h4>
                   <p>
                     <a href="mailto:ibai354@gmail.com">
                       ibai354@gmail.com
@@ -620,7 +720,7 @@
                   <i class="bi bi-github"></i>
                 </div>
                 <div class="content">
-                  <h4>GitHub</h4>
+                  <h4 data-i18n="contact.github.title">GitHub</h4>
                   <p>
                     <a href="https://github.com/Ibaiara"
                       target="_blank"
@@ -636,7 +736,7 @@
                   <i class="bi bi-linkedin"></i>
                 </div>
                 <div class="content">
-                  <h4>LinkedIn</h4>
+                  <h4 data-i18n="contact.linkedin.title">LinkedIn</h4>
                   <p>
                     <a href="https://www.linkedin.com/in/ibai-araña-b2832027a"
                       target="_blank"
@@ -652,16 +752,15 @@
           <!-- Right column: simple call to action -->
           <div class="col-lg-7">
             <div class="contact-form">
-              <h3>Ponte en Contacto</h3>
-              <p>
+              <h3 data-i18n="contact.cta.title">Ponte en Contacto</h3>
+              <p data-i18n="contact.cta.text">
                 La forma más rápida de contactarme es por correo electrónico
                 o LinkedIn. Suelo responder en un plazo razonable.
               </p>
-
               <p>
                 <a href="mailto:ibai354@gmail.com" class="btn">
                   <i class="bi bi-envelope"></i>
-                  Enviar Email
+                  <span data-i18n="contact.cta.button">Enviar Email</span>
                 </a>
               </p>
             </div>
